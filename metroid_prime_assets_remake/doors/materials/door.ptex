@@ -1,0 +1,134 @@
+{
+	"connections": [],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "@Node@536",
+	"node_position": {
+		"x": 0.0,
+		"y": 0.0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 339.0,
+				"y": 18.0
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1.0,
+					"b": 1.0,
+					"g": 1.0,
+					"r": 1.0,
+					"type": "Color"
+				},
+				"ao": 1.0,
+				"depth_scale": 0.5,
+				"emission_energy": 1.0,
+				"flags_transparent": true,
+				"metallic": 0.0,
+				"normal": 1.0,
+				"roughness": 1.0,
+				"size": 11,
+				"sss": 1.0
+			},
+			"seed_int": 0,
+			"type": "material"
+		},
+		{
+			"name": "shape",
+			"node_position": {
+				"x": -508.900634765625,
+				"y": -133.036682128906
+			},
+			"parameters": {
+				"edge": 0.1,
+				"radius": 0.85,
+				"shape": 1.0,
+				"sides": 6.0
+			},
+			"seed_int": 0,
+			"type": "shape"
+		},
+		{
+			"name": "colorize",
+			"node_position": {
+				"x": -501.900634765625,
+				"y": -242.036697387695
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 1.0,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "shape_2",
+			"node_position": {
+				"x": -517.642028808594,
+				"y": 280.242614746094
+			},
+			"parameters": {
+				"edge": 0.6,
+				"radius": 0.1,
+				"shape": 4.0,
+				"sides": 18.0
+			},
+			"seed_int": 0,
+			"type": "shape"
+		},
+		{
+			"color": {
+				"a": 1.0,
+				"b": 0.0,
+				"g": 0.0,
+				"r": 0.0,
+				"type": "Color"
+			},
+			"name": "comment",
+			"node_position": {
+				"x": -502.633758544922,
+				"y": -363.204437255859
+			},
+			"parameters": {
+
+			},
+			"seed_int": 0,
+			"size": {
+				"x": 275.387573242188,
+				"y": 86.6535034179688
+			},
+			"text": "This section takes care of the default door's shader.",
+			"title": "Comment",
+			"type": "comment"
+		}
+	],
+	"parameters": {
+
+	},
+	"seed_int": 0,
+	"shortdesc": "",
+	"type": "graph"
+}
