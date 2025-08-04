@@ -1,8 +1,45 @@
 {
-	"connections": [],
+	"connections": [
+		{
+			"from": "math",
+			"from_port": 0,
+			"to": "colorize",
+			"to_port": 0
+		},
+		{
+			"from": "shape_2",
+			"from_port": 0,
+			"to": "math",
+			"to_port": 0
+		},
+		{
+			"from": "shape",
+			"from_port": 0,
+			"to": "math",
+			"to_port": 1
+		},
+		{
+			"from": "shape_3",
+			"from_port": 0,
+			"to": "colorize_2",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_2",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 0
+		},
+		{
+			"from": "colorize",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 1
+		}
+	],
 	"label": "Graph",
 	"longdesc": "",
-	"name": "@Node@536",
+	"name": "_Node_536",
 	"node_position": {
 		"x": 0.0,
 		"y": 0.0
@@ -14,8 +51,8 @@
 			},
 			"name": "Material",
 			"node_position": {
-				"x": 339.0,
-				"y": 18.0
+				"x": 491.0,
+				"y": 11.0
 			},
 			"parameters": {
 				"albedo_color": {
@@ -32,7 +69,7 @@
 				"metallic": 0.0,
 				"normal": 1.0,
 				"roughness": 1.0,
-				"size": 11,
+				"size": 11.0,
 				"sss": 1.0
 			},
 			"seed_int": 0,
@@ -41,12 +78,12 @@
 		{
 			"name": "shape",
 			"node_position": {
-				"x": -508.900634765625,
-				"y": -133.036682128906
+				"x": -1093.72338867188,
+				"y": -255.872360229492
 			},
 			"parameters": {
 				"edge": 0.1,
-				"radius": 0.85,
+				"radius": 0.75,
 				"shape": 1.0,
 				"sides": 6.0
 			},
@@ -54,17 +91,47 @@
 			"type": "shape"
 		},
 		{
+			"name": "shape_2",
+			"node_position": {
+				"x": -1094.72338867188,
+				"y": -412.872344970703
+			},
+			"parameters": {
+				"edge": 0.1,
+				"radius": 0.15,
+				"shape": 4.0,
+				"sides": 16.0
+			},
+			"seed_int": 0,
+			"type": "shape"
+		},
+		{
+			"name": "math",
+			"node_position": {
+				"x": -890.749389648438,
+				"y": -338.872344970703
+			},
+			"parameters": {
+				"clamp": false,
+				"default_in1": 0.0,
+				"default_in2": 0.0,
+				"op": 15.0
+			},
+			"seed_int": 0,
+			"type": "math"
+		},
+		{
 			"name": "colorize",
 			"node_position": {
-				"x": -501.900634765625,
-				"y": -242.036697387695
+				"x": -612.057922363281,
+				"y": -330.569763183594
 			},
 			"parameters": {
 				"gradient": {
 					"interpolation": 1,
 					"points": [
 						{
-							"a": 1.0,
+							"a": 0.0,
 							"b": 0.0,
 							"g": 0.0,
 							"pos": 0.0,
@@ -75,7 +142,7 @@
 							"b": 1.0,
 							"g": 1.0,
 							"pos": 1.0,
-							"r": 0.0
+							"r": 1.0
 						}
 					],
 					"type": "Gradient"
@@ -83,21 +150,6 @@
 			},
 			"seed_int": 0,
 			"type": "colorize"
-		},
-		{
-			"name": "shape_2",
-			"node_position": {
-				"x": -517.642028808594,
-				"y": 280.242614746094
-			},
-			"parameters": {
-				"edge": 0.6,
-				"radius": 0.1,
-				"shape": 4.0,
-				"sides": 18.0
-			},
-			"seed_int": 0,
-			"type": "shape"
 		},
 		{
 			"color": {
@@ -109,20 +161,80 @@
 			},
 			"name": "comment",
 			"node_position": {
-				"x": -502.633758544922,
-				"y": -363.204437255859
+				"x": -1195.72338867188,
+				"y": -520.872375488281
 			},
 			"parameters": {
 
 			},
 			"seed_int": 0,
 			"size": {
-				"x": 275.387573242188,
-				"y": 86.6535034179688
+				"x": 231.5,
+				"y": 89.5
 			},
-			"text": "This section takes care of the default door's shader.",
+			"text": "This segment creates the panels of the door.",
 			"title": "Comment",
 			"type": "comment"
+		},
+		{
+			"name": "shape_3",
+			"node_position": {
+				"x": -805.033264160156,
+				"y": -164.712966918945
+			},
+			"parameters": {
+				"edge": 0.0,
+				"radius": 0.8,
+				"shape": 1.0,
+				"sides": 6.0
+			},
+			"seed_int": 0,
+			"type": "shape"
+		},
+		{
+			"name": "colorize_2",
+			"node_position": {
+				"x": -620.087585449219,
+				"y": -163.061676025391
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 0.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.0,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 1.0,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"generic_size": 1,
+			"name": "blend2",
+			"node_position": {
+				"x": -410.953643798828,
+				"y": -243.975387573242
+			},
+			"parameters": {
+				"amount1": 1.0,
+				"blend_type1": 0
+			},
+			"seed_int": 0,
+			"type": "blend2"
 		}
 	],
 	"parameters": {
