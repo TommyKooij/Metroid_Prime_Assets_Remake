@@ -1,11 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://dejs3gf61s8mf"]
+[gd_scene load_steps=6 format=3 uid="uid://dejs3gf61s8mf"]
 
 [ext_resource type="PackedScene" uid="uid://nm2wkrukxcsx" path="res://energy_capsules/energy_capsule01.tscn" id="1_gnbok"]
 [ext_resource type="PackedScene" uid="uid://c31qdujl0uqc1" path="res://energy_capsules/energy_capsule02.tscn" id="2_pc5fc"]
 [ext_resource type="PackedScene" uid="uid://b6kampklt4bfv" path="res://energy_capsules/energy_capsule03.tscn" id="3_o2h61"]
 [ext_resource type="PackedScene" uid="uid://da35t7ltoa2v3" path="res://energy_capsules/energy_capsule04.tscn" id="4_8r02x"]
 
+[sub_resource type="Environment" id="Environment_gnbok"]
+glow_enabled = true
+glow_normalized = true
+
 [node name="energy_capsules_collection" type="Node3D"]
+
+[node name="scene" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="scene"]
+environment = SubResource("Environment_gnbok")
 
 [node name="energy_capsule" parent="." instance=ExtResource("1_gnbok")]
 

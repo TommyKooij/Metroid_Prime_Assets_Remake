@@ -11,5 +11,5 @@ config_version=5
 [application]
 
 config/name="Metroid_Prime_Assets_Remake"
-config/features=PackedStringArray("4.4", "Forward Plus", "Redot")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"

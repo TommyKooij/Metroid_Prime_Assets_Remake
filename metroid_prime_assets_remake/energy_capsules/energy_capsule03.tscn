@@ -71,6 +71,9 @@ hue_variation_max = -2.23517e-08
 transparency = 1
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("2_cqua1")
+emission_enabled = true
+emission = Color(0.498039, 0.6, 1, 1)
+emission_energy_multiplier = 0.5
 billboard_mode = 3
 billboard_keep_scale = true
 particles_anim_h_frames = 1
@@ -110,7 +113,6 @@ shader_parameter/main_texture_power = 1.5
 shader_parameter/main_texture_emission = ExtResource("5_tiga1")
 
 [sub_resource type="Curve" id="Curve_f2h4h"]
-_limits = [0.0, 5.0, 0.0, 1.0]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 5), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
@@ -160,7 +162,6 @@ draw_pass_1 = SubResource("QuadMesh_r6m8y")
 material_override = SubResource("StandardMaterial3D_r6m8y")
 amount = 1
 explosiveness = 1.0
-fixed_fps = 60
 local_coords = true
 process_material = SubResource("ParticleProcessMaterial_yxh8w")
 draw_pass_1 = SubResource("QuadMesh_ovl8d")
