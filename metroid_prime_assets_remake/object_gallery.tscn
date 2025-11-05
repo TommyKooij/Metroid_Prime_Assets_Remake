@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dejs3gf61s8mf"]
+
+[ext_resource type="PackedScene" uid="uid://nm2wkrukxcsx" path="res://energy_capsules/energy_capsule01.tscn" id="1_7wtgh"]
+[ext_resource type="PackedScene" uid="uid://c31qdujl0uqc1" path="res://energy_capsules/energy_capsule02.tscn" id="2_kjbsd"]
+[ext_resource type="PackedScene" uid="uid://b6kampklt4bfv" path="res://energy_capsules/energy_capsule03.tscn" id="3_rgi60"]
+[ext_resource type="PackedScene" uid="uid://da35t7ltoa2v3" path="res://energy_capsules/energy_capsule04.tscn" id="4_nrmhn"]
+
+[sub_resource type="Environment" id="Environment_gnbok"]
+glow_enabled = true
+glow_normalized = true
+
+[node name="object_gallery" type="Node3D"]
+
+[node name="scene" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="scene"]
+environment = SubResource("Environment_gnbok")
+
+[node name="energy_capsule" parent="." instance=ExtResource("1_7wtgh")]
+
+[node name="energy_capsule2" parent="." instance=ExtResource("2_kjbsd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="energy_capsule3" parent="." instance=ExtResource("3_rgi60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="energy_capsule4" parent="." instance=ExtResource("4_nrmhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)

@@ -1,0 +1,49 @@
+[gd_scene load_steps=11 format=3 uid="uid://bxwvw7veijugn"]
+
+[ext_resource type="Shader" uid="uid://bb4g14xp62v37" path="res://portals/shaders/dark_portal.tres" id="1_n4apo"]
+[ext_resource type="Texture2D" uid="uid://buycx8hone0yr" path="res://portals/materials/cellular.png" id="2_n4apo"]
+[ext_resource type="Texture2D" uid="uid://btblxqtleuchc" path="res://portals/materials/cellular-occ.png" id="3_skol1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wb481"]
+render_priority = 0
+shader = ExtResource("1_n4apo")
+shader_parameter/main_texture_speed = Vector2(0, 0.2)
+shader_parameter/main_texture = ExtResource("2_n4apo")
+shader_parameter/main_texture_power = 1.0
+shader_parameter/main_texture_emission = ExtResource("3_skol1")
+
+[sub_resource type="Curve" id="Curve_x4cho"]
+_data = [Vector2(0, 0.296703), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveTexture" id="CurveTexture_8wnah"]
+curve = SubResource("Curve_x4cho")
+
+[sub_resource type="Curve" id="Curve_8wnah"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_fvyoa"]
+curve = SubResource("Curve_8wnah")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mqvsw"]
+gravity = Vector3(0, 0, 0)
+scale_min = 5.0
+scale_max = 5.0
+color = Color(0.470588, 0, 0.694118, 1)
+alpha_curve = SubResource("CurveTexture_8wnah")
+emission_curve = SubResource("CurveTexture_fvyoa")
+
+[sub_resource type="SphereMesh" id="SphereMesh_5f835"]
+
+[node name="dark_portal" type="Node3D"]
+
+[node name="wave" type="GPUParticles3D" parent="."]
+material_override = SubResource("ShaderMaterial_wb481")
+amount = 1
+fixed_fps = 60
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_mqvsw")
+draw_pass_1 = SubResource("SphereMesh_5f835")
+
+[node name="smoke" type="GPUParticles3D" parent="."]
