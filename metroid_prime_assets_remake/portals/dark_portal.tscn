@@ -125,21 +125,21 @@ material = SubResource("StandardMaterial3D_e47o7")
 offsets = PackedFloat32Array(0, 0.474576, 1)
 colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_e47o7"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_8wnah"]
 gradient = SubResource("Gradient_fvyoa")
 
 [sub_resource type="Curve" id="Curve_bjucc"]
 _data = [Vector2(0, 0), 0.0, 2.0, 0, 1, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.0, 0.0, 1, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_j5t1q"]
+[sub_resource type="CurveTexture" id="CurveTexture_bjucc"]
 curve = SubResource("Curve_bjucc")
 
 [sub_resource type="Curve" id="Curve_6qbmw"]
 _data = [Vector2(0, 0.5), 0.0, 0.5, 0, 1, Vector2(1, 1), 0.5, 0.0, 1, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_u1mp3"]
+[sub_resource type="CurveTexture" id="CurveTexture_j5t1q"]
 curve = SubResource("Curve_6qbmw")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kmaxs"]
@@ -150,12 +150,12 @@ angle_max = 360.0
 spread = 180.0
 gravity = Vector3(0, 0, 0)
 scale_max = 1.5
-scale_curve = SubResource("CurveTexture_u1mp3")
+scale_curve = SubResource("CurveTexture_j5t1q")
 color = Color(0.2535, 0.00599999, 0.6, 1)
-color_ramp = SubResource("GradientTexture1D_e47o7")
-emission_curve = SubResource("CurveTexture_j5t1q")
+color_ramp = SubResource("GradientTexture1D_8wnah")
+emission_curve = SubResource("CurveTexture_bjucc")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fd5tm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6qbmw"]
 transparency = 1
 blend_mode = 1
 shading_mode = 0
@@ -168,7 +168,7 @@ particles_anim_v_frames = 1
 particles_anim_loop = false
 
 [sub_resource type="QuadMesh" id="QuadMesh_hl8qy"]
-material = SubResource("StandardMaterial3D_fd5tm")
+material = SubResource("StandardMaterial3D_6qbmw")
 
 [node name="dark_portal" type="Node3D"]
 
@@ -189,12 +189,16 @@ draw_pass_1 = SubResource("QuadMesh_6qbmw")
 
 [node name="inner_shock" type="GPUParticles3D" parent="."]
 amount = 20
+randomness = 1.0
 fixed_fps = 60
+local_coords = true
 process_material = SubResource("ParticleProcessMaterial_fvyoa")
 draw_pass_1 = SubResource("QuadMesh_bjucc")
 
 [node name="outer_shock" type="GPUParticles3D" parent="."]
 amount = 12
+randomness = 1.0
 fixed_fps = 60
+local_coords = true
 process_material = SubResource("ParticleProcessMaterial_kmaxs")
 draw_pass_1 = SubResource("QuadMesh_hl8qy")
