@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://nd531j2ga6ma" path="res://downloads/kenney_particle-pack/PNG (Transparent)/spark_05.png" id="6_36kxx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wb481"]
-render_priority = 0
+render_priority = 1
 shader = ExtResource("1_l44nv")
 shader_parameter/main_texture_speed = Vector2(0, 0.2)
 shader_parameter/main_texture = ExtResource("2_em6mi")
@@ -37,6 +37,7 @@ alpha_curve = SubResource("CurveTexture_x4cho")
 emission_curve = SubResource("CurveTexture_fvyoa")
 
 [sub_resource type="SphereMesh" id="SphereMesh_5f835"]
+lightmap_size_hint = Vector2i(17, 9)
 
 [sub_resource type="Curve" id="Curve_em6mi"]
 _data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.5), 0.0, 0.0, 0, 0]
@@ -162,6 +163,7 @@ material = SubResource("StandardMaterial3D_fd5tm")
 
 [node name="wave" type="GPUParticles3D" parent="."]
 material_override = SubResource("ShaderMaterial_wb481")
+lod_bias = 0.001
 amount = 1
 fixed_fps = 60
 local_coords = true
@@ -170,7 +172,7 @@ draw_pass_1 = SubResource("SphereMesh_5f835")
 
 [node name="whirl" type="GPUParticles3D" parent="."]
 amount = 1
-lifetime = 600.0
+lifetime = 120.0
 explosiveness = 1.0
 fixed_fps = 60
 local_coords = true

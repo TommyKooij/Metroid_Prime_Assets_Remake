@@ -1,11 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://dmjdn8hcpr5rq"]
+[gd_scene load_steps=15 format=3 uid="uid://dmjdn8hcpr5rq"]
 
 [ext_resource type="Texture2D" uid="uid://dbhis0qnr7e4w" path="res://doors/materials/hexagon_outline.png" id="1_ev1mp"]
 [ext_resource type="Texture2D" uid="uid://difli58xgmans" path="res://doors/materials/hexagon.png" id="1_o873b"]
+[ext_resource type="Texture2D" uid="uid://b3oc5sirx8ql5" path="res://doors/materials/hexagon_blur.png" id="2_mqhme"]
 [ext_resource type="Texture2D" uid="uid://cobv2cceejura" path="res://doors/materials/panels.png" id="3_ixgfn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ixgfn"]
-render_priority = 10
+render_priority = 1
 transparency = 1
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("1_ev1mp")
@@ -24,12 +25,24 @@ color = Color(0, 0, 0, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_xsljj"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uqgb4"]
+render_priority = 2
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_color = Color(0.698039, 1, 1, 0.392157)
+albedo_texture = ExtResource("2_mqhme")
+
+[sub_resource type="QuadMesh" id="QuadMesh_yopxu"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ev1mp"]
 transparency = 1
 cull_mode = 2
 shading_mode = 0
 vertex_color_use_as_albedo = true
-albedo_color = Color(0.196078, 0.196078, 0.196078, 1)
+albedo_color = Color(0, 0, 0, 1)
 albedo_texture = ExtResource("1_o873b")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mqhme"]
@@ -37,7 +50,6 @@ render_priority = 1
 transparency = 1
 shading_mode = 0
 vertex_color_use_as_albedo = true
-albedo_color = Color(0.392157, 0.392157, 0.392157, 1)
 albedo_texture = ExtResource("3_ixgfn")
 
 [sub_resource type="QuadMesh" id="QuadMesh_ixgfn"]
@@ -53,7 +65,13 @@ fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_yopxu")
 draw_pass_1 = SubResource("QuadMesh_xsljj")
 
+[node name="hexagon_blur" type="MeshInstance3D" parent="."]
+sorting_offset = 2.0
+material_override = SubResource("StandardMaterial3D_uqgb4")
+mesh = SubResource("QuadMesh_yopxu")
+
 [node name="door" type="MeshInstance3D" parent="."]
+visible = false
 material_override = SubResource("StandardMaterial3D_ev1mp")
 material_overlay = SubResource("StandardMaterial3D_mqhme")
 mesh = SubResource("QuadMesh_ixgfn")
