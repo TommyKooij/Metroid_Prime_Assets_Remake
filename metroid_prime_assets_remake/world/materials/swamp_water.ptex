@@ -1,0 +1,682 @@
+{
+	"connections": [
+		{
+			"from": "fbm2",
+			"from_port": 0,
+			"to": "blend",
+			"to_port": 0
+		},
+		{
+			"from": "fbm2_3",
+			"from_port": 0,
+			"to": "blend",
+			"to_port": 1
+		},
+		{
+			"from": "uniform",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		},
+		{
+			"from": "blend",
+			"from_port": 0,
+			"to": "fast_blur",
+			"to_port": 0
+		},
+		{
+			"from": "fast_blur",
+			"from_port": 0,
+			"to": "normal_map2",
+			"to_port": 0
+		},
+		{
+			"from": "blend_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 4
+		},
+		{
+			"from": "fbm2_4",
+			"from_port": 0,
+			"to": "buffer_2",
+			"to_port": 0
+		},
+		{
+			"from": "normal_map2",
+			"from_port": 0,
+			"to": "warp_3",
+			"to_port": 0
+		},
+		{
+			"from": "buffer_2",
+			"from_port": 0,
+			"to": "warp_3",
+			"to_port": 1
+		},
+		{
+			"from": "buffer_2",
+			"from_port": 0,
+			"to": "warp_4",
+			"to_port": 1
+		},
+		{
+			"from": "normal_map2",
+			"from_port": 0,
+			"to": "warp_4",
+			"to_port": 0
+		},
+		{
+			"from": "warp_4",
+			"from_port": 0,
+			"to": "blend_2",
+			"to_port": 1
+		},
+		{
+			"from": "warp_3",
+			"from_port": 0,
+			"to": "blend_2",
+			"to_port": 0
+		},
+		{
+			"from": "uniform_greyscale",
+			"from_port": 0,
+			"to": "math_2",
+			"to_port": 0
+		},
+		{
+			"from": "math_2",
+			"from_port": 0,
+			"to": "blend_2",
+			"to_port": 2
+		},
+		{
+			"from": "fbm2_5",
+			"from_port": 0,
+			"to": "math_3",
+			"to_port": 0
+		},
+		{
+			"from": "math_3",
+			"from_port": 0,
+			"to": "math_4",
+			"to_port": 0
+		},
+		{
+			"from": "math_4",
+			"from_port": 0,
+			"to": "math_2",
+			"to_port": 1
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "1640",
+	"node_position": {
+		"x": 0.0,
+		"y": 0.0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 331.0,
+				"y": 355.0
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1.0,
+					"b": 1.0,
+					"g": 1.0,
+					"r": 1.0,
+					"type": "Color"
+				},
+				"ao": 1.0,
+				"depth_scale": 0.5,
+				"emission_energy": 1.0,
+				"flags_transparent": true,
+				"metallic": 0.0,
+				"normal": 1.0,
+				"roughness": 0.21
+			},
+			"seed_int": 0,
+			"type": "material_dynamic"
+		},
+		{
+			"name": "fbm2",
+			"node_position": {
+				"x": -1511.5,
+				"y": -30.5
+			},
+			"parameters": {
+				"folds": 0.0,
+				"iterations": 2.0,
+				"noise": 1.0,
+				"offset": 0.72,
+				"persistence": 0.5,
+				"scale_x": 16.0,
+				"scale_y": 16.0
+			},
+			"seed_int": 0,
+			"type": "fbm2"
+		},
+		{
+			"name": "normal_map2",
+			"node_position": {
+				"x": -866.5,
+				"y": 122.5
+			},
+			"parameters": {
+				"buffer": 1.0,
+				"param2": 0.0,
+				"size": 10.0,
+				"strength": 1.0
+			},
+			"seed_int": 0,
+			"type": "normal_map2"
+		},
+		{
+			"name": "fbm2_3",
+			"node_position": {
+				"x": -1513.5,
+				"y": 207.5
+			},
+			"parameters": {
+				"folds": 0.0,
+				"iterations": 5.0,
+				"noise": 3.0,
+				"offset": 0.72,
+				"persistence": 0.5,
+				"scale_x": 4.0,
+				"scale_y": 4.0
+			},
+			"seed_int": 0,
+			"type": "fbm2"
+		},
+		{
+			"name": "blend",
+			"node_position": {
+				"x": -1201.5,
+				"y": 105.5
+			},
+			"parameters": {
+				"amount": 0.1,
+				"blend_type": 4.0
+			},
+			"seed_int": 0,
+			"type": "blend"
+		},
+		{
+			"name": "uniform",
+			"node_position": {
+				"x": 50.5,
+				"y": 298.5
+			},
+			"parameters": {
+				"color": {
+					"a": 1.0,
+					"b": 0.639215707778931,
+					"g": 0.647058844566345,
+					"r": 0.423529416322708,
+					"type": "Color"
+				}
+			},
+			"seed_int": 0,
+			"type": "uniform"
+		},
+		{
+			"name": "fbm2_4",
+			"node_position": {
+				"x": -1155.5,
+				"y": 600.5
+			},
+			"parameters": {
+				"folds": 0.0,
+				"iterations": 1.0,
+				"noise": 1.0,
+				"offset": 0.0,
+				"persistence": 0.5,
+				"scale_x": 8.0,
+				"scale_y": 8.0
+			},
+			"seed_int": 0,
+			"type": "fbm2"
+		},
+		{
+			"name": "fast_blur",
+			"node_position": {
+				"x": -1208.5,
+				"y": 234.5
+			},
+			"parameters": {
+				"param0": 10.0,
+				"param1": 15.0,
+				"param2": 2.0,
+				"param3": 1.0
+			},
+			"seed_int": 0,
+			"type": "fast_blur"
+		},
+		{
+			"name": "buffer_2",
+			"node_position": {
+				"x": -890.5,
+				"y": 600.5
+			},
+			"parameters": {
+				"size": 10.0
+			},
+			"seed_int": 0,
+			"type": "buffer",
+			"version": 1
+		},
+		{
+			"name": "blend_2",
+			"node_position": {
+				"x": -30.5,
+				"y": 558.5
+			},
+			"parameters": {
+				"amount": 1.0,
+				"blend_type": 0.0
+			},
+			"seed_int": 0,
+			"type": "blend"
+		},
+		{
+			"name": "uniform_greyscale",
+			"node_position": {
+				"x": -781.5,
+				"y": 810.5
+			},
+			"parameters": {
+				"color": "2.0 * abs(fract($time) - 0.5)"
+			},
+			"seed_int": 0,
+			"type": "uniform_greyscale"
+		},
+		{
+			"name": "warp_3",
+			"node_position": {
+				"x": -465.4375,
+				"y": 321.96875
+			},
+			"parameters": {
+				"amount": "-0.03 + fract($time + 0.5) * 0.06",
+				"eps": 0.1,
+				"mode": 0.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec2 $(name_uv)_slope = $(name)_slope($uv, $eps);\nvec2 $(name_uv)_warp = $mode;",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(sin($uv.x*20.0)*0.5+0.5, sin($uv.y*20.0)*0.5+0.5, 0, 1)",
+						"label": "",
+						"longdesc": "The input image to be warped",
+						"name": "in",
+						"shortdesc": "Input",
+						"type": "rgba"
+					},
+					{
+						"default": "0.0",
+						"function": true,
+						"label": "",
+						"longdesc": "The height map whose slopes are used to deform the input",
+						"name": "d",
+						"shortdesc": "Height map",
+						"type": "f"
+					}
+				],
+				"instance": "vec2 $(name)_slope(vec2 uv, float epsilon) {\n\treturn normalize( vec2($d(fract(uv+vec2(epsilon, 0.0)))-$d(fract(uv-vec2(epsilon, 0.0))), $d(fract(uv+vec2(0.0, epsilon)))-$d(fract(uv-vec2(0.0, epsilon)))) );\n}",
+				"longdesc": "Warps its input according to a heightmap",
+				"name": "Warp",
+				"outputs": [
+					{
+						"longdesc": "Shows the warped image",
+						"rgba": "$in($uv+$amount*$(name_uv)_warp)",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": 0.0,
+						"label": "",
+						"longdesc": "Both warp modes extract their direction from the height map slopes:\n- Slope warp intensity only depends on the slope\n- Distance to top warp intensity depends on the slope and the distance to the top, and can be used to create mosaic-like patterns\n\nA Transform node with translate maps can produce effects similar to Slope Warp and is generally faster.",
+						"name": "mode",
+						"shortdesc": "Mode",
+						"type": "enum",
+						"values": [
+							{
+								"name": "Slope",
+								"value": "$(name_uv)_slope"
+							},
+							{
+								"name": "Distance to top",
+								"value": "$(name_uv)_slope*(1.0-$d($uv))"
+							}
+						]
+					},
+					{
+						"control": "None",
+						"default": 0.0,
+						"label": "",
+						"longdesc": "The strength of the warp effect",
+						"max": 1.0,
+						"min": 0.0,
+						"name": "amount",
+						"shortdesc": "Strength",
+						"step": 0.005,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 0.0,
+						"label": "",
+						"longdesc": "The offset used to measure slopes",
+						"max": 0.2,
+						"min": 0.005,
+						"name": "eps",
+						"shortdesc": "Epsilon",
+						"step": 0.005,
+						"type": "float"
+					}
+				],
+				"shortdesc": "Warp"
+			},
+			"type": "shader"
+		},
+		{
+			"name": "warp_4",
+			"node_position": {
+				"x": -461.9375,
+				"y": 466.96875
+			},
+			"parameters": {
+				"amount": "-0.03 + fract($time) * 0.06",
+				"eps": 0.1,
+				"mode": 0.0
+			},
+			"seed_int": 0,
+			"shader_model": {
+				"code": "vec2 $(name_uv)_slope = $(name)_slope($uv, $eps);\nvec2 $(name_uv)_warp = $mode;",
+				"global": "",
+				"inputs": [
+					{
+						"default": "vec4(sin($uv.x*20.0)*0.5+0.5, sin($uv.y*20.0)*0.5+0.5, 0, 1)",
+						"label": "",
+						"longdesc": "The input image to be warped",
+						"name": "in",
+						"shortdesc": "Input",
+						"type": "rgba"
+					},
+					{
+						"default": "0.0",
+						"function": true,
+						"label": "",
+						"longdesc": "The height map whose slopes are used to deform the input",
+						"name": "d",
+						"shortdesc": "Height map",
+						"type": "f"
+					}
+				],
+				"instance": "vec2 $(name)_slope(vec2 uv, float epsilon) {\n\treturn normalize( vec2($d(fract(uv+vec2(epsilon, 0.0)))-$d(fract(uv-vec2(epsilon, 0.0))), $d(fract(uv+vec2(0.0, epsilon)))-$d(fract(uv-vec2(0.0, epsilon)))) );\n}",
+				"longdesc": "Warps its input according to a heightmap",
+				"name": "Warp",
+				"outputs": [
+					{
+						"longdesc": "Shows the warped image",
+						"rgba": "$in($uv+$amount*$(name_uv)_warp)",
+						"shortdesc": "Output",
+						"type": "rgba"
+					}
+				],
+				"parameters": [
+					{
+						"default": 0.0,
+						"label": "",
+						"longdesc": "Both warp modes extract their direction from the height map slopes:\n- Slope warp intensity only depends on the slope\n- Distance to top warp intensity depends on the slope and the distance to the top, and can be used to create mosaic-like patterns\n\nA Transform node with translate maps can produce effects similar to Slope Warp and is generally faster.",
+						"name": "mode",
+						"shortdesc": "Mode",
+						"type": "enum",
+						"values": [
+							{
+								"name": "Slope",
+								"value": "$(name_uv)_slope"
+							},
+							{
+								"name": "Distance to top",
+								"value": "$(name_uv)_slope*(1.0-$d($uv))"
+							}
+						]
+					},
+					{
+						"control": "None",
+						"default": 0.0,
+						"label": "",
+						"longdesc": "The strength of the warp effect",
+						"max": 1.0,
+						"min": 0.0,
+						"name": "amount",
+						"shortdesc": "Strength",
+						"step": 0.005,
+						"type": "float"
+					},
+					{
+						"control": "None",
+						"default": 0.0,
+						"label": "",
+						"longdesc": "The offset used to measure slopes",
+						"max": 0.2,
+						"min": 0.005,
+						"name": "eps",
+						"shortdesc": "Epsilon",
+						"step": 0.005,
+						"type": "float"
+					}
+				],
+				"shortdesc": "Warp"
+			},
+			"type": "shader"
+		},
+		{
+			"name": "math_2",
+			"node_position": {
+				"x": -351.9375,
+				"y": 1067.96875
+			},
+			"parameters": {
+				"clamp": false,
+				"default_in1": 0.0,
+				"default_in2": 0.0,
+				"op": 0.0
+			},
+			"seed_int": 0,
+			"type": "math"
+		},
+		{
+			"name": "fbm2_5",
+			"node_position": {
+				"x": -940.9375,
+				"y": 1061.96875
+			},
+			"parameters": {
+				"folds": 0.0,
+				"iterations": 1.0,
+				"noise": 1.0,
+				"offset": 0.0,
+				"persistence": 0.5,
+				"scale_x": 8.0,
+				"scale_y": 8.0
+			},
+			"seed_int": 156560148,
+			"type": "fbm2"
+		},
+		{
+			"name": "math_3",
+			"node_position": {
+				"x": -674.9375,
+				"y": 1031.96875
+			},
+			"parameters": {
+				"clamp": false,
+				"default_in1": 0.0,
+				"default_in2": 0.5,
+				"op": 1.0
+			},
+			"seed_int": 0,
+			"type": "math"
+		},
+		{
+			"name": "math_4",
+			"node_position": {
+				"x": -671.9375,
+				"y": 1176.96875
+			},
+			"parameters": {
+				"clamp": false,
+				"default_in1": 0.0,
+				"default_in2": 0.1,
+				"op": 2.0
+			},
+			"seed_int": 0,
+			"type": "math"
+		},
+		{
+			"color": {
+				"a": 1.0,
+				"b": 0.0,
+				"g": 0.0,
+				"r": 0.0,
+				"type": "Color"
+			},
+			"name": "comment",
+			"node_position": {
+				"x": -1573.9375,
+				"y": -96.03125
+			},
+			"parameters": {
+
+			},
+			"seed_int": 0,
+			"size": {
+				"x": 907.0,
+				"y": 556.0
+			},
+			"text": "",
+			"title": "Basic Water Normal Map",
+			"type": "comment"
+		},
+		{
+			"color": {
+				"a": 1.0,
+				"b": 0.0,
+				"g": 0.0,
+				"r": 0.0,
+				"type": "Color"
+			},
+			"name": "comment_2",
+			"node_position": {
+				"x": -538.9375,
+				"y": 133.96875
+			},
+			"parameters": {
+
+			},
+			"seed_int": 0,
+			"size": {
+				"x": 333.0,
+				"y": 498.0
+			},
+			"text": "Two offset displacement. Warp was changed to normalize the flowmap to ensure random movement everywhere.",
+			"title": "Warping",
+			"type": "comment"
+		},
+		{
+			"color": {
+				"a": 1.0,
+				"b": 0.0,
+				"g": 0.0,
+				"r": 0.0,
+				"type": "Color"
+			},
+			"name": "comment_3",
+			"node_position": {
+				"x": -93.9375,
+				"y": 429.96875
+			},
+			"parameters": {
+
+			},
+			"seed_int": 0,
+			"size": {
+				"x": 338.0,
+				"y": 286.0
+			},
+			"text": "MIx back and forth between the two warped normal maps to avoid warping going too far",
+			"title": "Mix",
+			"type": "comment"
+		},
+		{
+			"color": {
+				"a": 1.0,
+				"b": 0.0,
+				"g": 0.0,
+				"r": 0.0,
+				"type": "Color"
+			},
+			"name": "comment_4",
+			"node_position": {
+				"x": -833.9375,
+				"y": 739.96875
+			},
+			"parameters": {
+
+			},
+			"seed_int": 0,
+			"size": {
+				"x": 300.0,
+				"y": 200.0
+			},
+			"text": "",
+			"title": "Sawtooth Time",
+			"type": "comment"
+		},
+		{
+			"color": {
+				"a": 1.0,
+				"b": 0.0,
+				"g": 0.0,
+				"r": 0.0,
+				"type": "Color"
+			},
+			"name": "comment_5",
+			"node_position": {
+				"x": -989.9375,
+				"y": 969.96875
+			},
+			"parameters": {
+
+			},
+			"seed_int": 0,
+			"size": {
+				"x": 869.0,
+				"y": 352.0
+			},
+			"text": "Adds noise to time to slightly offset mix, to avoid pulsing",
+			"title": "Add Noise",
+			"type": "comment"
+		}
+	],
+	"parameters": {
+
+	},
+	"seed_int": 0,
+	"shortdesc": "",
+	"type": "graph"
+}

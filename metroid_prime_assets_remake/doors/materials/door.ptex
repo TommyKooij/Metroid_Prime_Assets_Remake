@@ -53,6 +53,24 @@
 			"from_port": 0,
 			"to": "math_2",
 			"to_port": 1
+		},
+		{
+			"from": "math_2",
+			"from_port": 0,
+			"to": "math_3",
+			"to_port": 0
+		},
+		{
+			"from": "math_3",
+			"from_port": 0,
+			"to": "math_4",
+			"to_port": 0
+		},
+		{
+			"from": "noise2",
+			"from_port": 0,
+			"to": "math_4",
+			"to_port": 1
 		}
 	],
 	"label": "Graph",
@@ -97,7 +115,7 @@
 			"name": "shape",
 			"node_position": {
 				"x": -1102.72338867188,
-				"y": -174.872360229492
+				"y": -175.872360229492
 			},
 			"parameters": {
 				"edge": 0.5,
@@ -276,7 +294,7 @@
 				"clamp": false,
 				"default_in1": 0.0,
 				"default_in2": 0.0,
-				"op": 12
+				"op": 12.0
 			},
 			"seed_int": 0,
 			"type": "math"
@@ -288,7 +306,7 @@
 				"y": 78.6329345703125
 			},
 			"parameters": {
-				"edge": 0.1,
+				"edge": 0.44,
 				"radius": 0.8,
 				"shape": 1.0,
 				"sides": 6.0
@@ -322,19 +340,47 @@
 			"type": "comment"
 		},
 		{
-			"name": "perlin",
+			"name": "math_3",
 			"node_position": {
-				"x": -601.916015625,
-				"y": -699.867065429688
+				"x": -491.791015625,
+				"y": 10.674560546875
 			},
 			"parameters": {
-				"iterations": 3.0,
-				"persistence": 0.5,
-				"scale_x": 4.0,
-				"scale_y": 4.0
+				"clamp": false,
+				"default_in1": 0.0,
+				"default_in2": 0.0,
+				"op": 8
 			},
 			"seed_int": 0,
-			"type": "perlin"
+			"type": "math"
+		},
+		{
+			"name": "noise2",
+			"node_position": {
+				"x": -550.791015625,
+				"y": 266.674560546875
+			},
+			"parameters": {
+				"density": 0.5,
+				"size": 6
+			},
+			"seed_int": 0,
+			"type": "noise2"
+		},
+		{
+			"name": "math_4",
+			"node_position": {
+				"x": -164.791015625,
+				"y": 15.674560546875
+			},
+			"parameters": {
+				"clamp": false,
+				"default_in1": 0.0,
+				"default_in2": 0.0,
+				"op": 1
+			},
+			"seed_int": 0,
+			"type": "math"
 		}
 	],
 	"parameters": {

@@ -1,6 +1,6 @@
 [gd_scene load_steps=35 format=3 uid="uid://p0k1m7312p7"]
 
-[ext_resource type="Shader" uid="uid://bb4g14xp62v37" path="res://portals/shaders/dark_portal.tres" id="1_l44nv"]
+[ext_resource type="Shader" uid="uid://bb4g14xp62v37" path="res://portals/shaders/portal.tres" id="1_l44nv"]
 [ext_resource type="Texture2D" uid="uid://buycx8hone0yr" path="res://portals/materials/cellular.png" id="2_em6mi"]
 [ext_resource type="Texture2D" uid="uid://btblxqtleuchc" path="res://portals/materials/cellular-occ.png" id="3_32o8e"]
 [ext_resource type="Texture2D" uid="uid://cfsv1qvrlmn06" path="res://downloads/kenney_particle-pack/PNG (Transparent)/light_02.png" id="4_vjk6t"]
