@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dejs3gf61s8mf"]
+[gd_scene load_steps=8 format=3 uid="uid://dejs3gf61s8mf"]
 
 [ext_resource type="PackedScene" uid="uid://nm2wkrukxcsx" path="res://energy_capsules/energy_capsule01.tscn" id="1_7wtgh"]
 [ext_resource type="PackedScene" uid="uid://c31qdujl0uqc1" path="res://energy_capsules/energy_capsule02.tscn" id="2_kjbsd"]
@@ -6,8 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://da35t7ltoa2v3" path="res://energy_capsules/energy_capsule04.tscn" id="4_nrmhn"]
 [ext_resource type="PackedScene" uid="uid://bxwvw7veijugn" path="res://portals/dark_portal.tscn" id="5_kjbsd"]
 [ext_resource type="PackedScene" uid="uid://p0k1m7312p7" path="res://portals/light_portal.tscn" id="6_rgi60"]
-[ext_resource type="PackedScene" uid="uid://bm75eqsufixtv" path="res://world/swamp_water01.tscn" id="7_nrmhn"]
-[ext_resource type="PackedScene" uid="uid://bmj5ufcrpls7n" path="res://world/swamp_water02.tscn" id="8_x4smb"]
 
 [sub_resource type="Environment" id="Environment_gnbok"]
 glow_enabled = true
@@ -36,9 +34,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -7)
 
 [node name="light_portal" parent="scene" instance=ExtResource("6_rgi60")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.5, -7)
-
-[node name="swamp_water01" parent="scene" instance=ExtResource("7_nrmhn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
-
-[node name="swamp_water02" parent="scene" instance=ExtResource("8_x4smb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)

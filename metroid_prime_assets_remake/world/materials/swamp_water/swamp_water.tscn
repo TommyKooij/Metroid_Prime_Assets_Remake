@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbim6t2xlj248"]
+
+[ext_resource type="Material" uid="uid://b5i2fa3l6mhae" path="res://world/materials/swamp_water/swamp_water.tres" id="1_qtsr3"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_qtsr3"]
+
+[node name="swamp_water" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_qtsr3")
+mesh = SubResource("SphereMesh_qtsr3")

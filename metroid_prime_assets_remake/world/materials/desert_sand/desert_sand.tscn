@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5icnbcdbdlfn"]
+
+[ext_resource type="Material" path="res://world/materials/desert_sand/desert_sand.tres" id="1_skaf5"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_e6upt"]
+
+[node name="desert_sand" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_skaf5")
+mesh = SubResource("SphereMesh_e6upt")

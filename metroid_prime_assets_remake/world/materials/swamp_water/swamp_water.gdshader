@@ -46,36 +46,36 @@ vec3 hsv2rgb(vec3 c) {
 	vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
 	return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
 }
-const vec4 p_o926270107693_albedo_color = vec4(1.000000000, 1.000000000, 1.000000000, 1.000000000);
-const float p_o926270107693_metallic = 0.000000000;
-const float p_o926270107693_roughness = 0.210000000;
-const float p_o926270107693_emission_energy = 1.000000000;
-const float p_o926270107693_normal = 1.000000000;
-const float p_o926270107693_ao = 1.000000000;
-const float p_o926270107693_depth_scale = 0.500000000;
-const float p_o927964606540_amount = 1.000000000;
-const float p_o928132378705_default_in1 = 0.000000000;
-const float p_o928132378705_default_in2 = 0.000000000;
-const float p_o928182710355_default_in1 = 0.000000000;
-const float p_o928182710355_default_in2 = 0.100000000;
-const float p_o928165933138_default_in1 = 0.000000000;
-const float p_o928165933138_default_in2 = 0.500000000;
-const float seed_o928149155919 = 0.036452000;
-const float p_o928149155919_scale_x = 8.000000000;
-const float p_o928149155919_scale_y = 8.000000000;
-const float p_o928149155919_folds = 0.000000000;
-const float p_o928149155919_iterations = 1.000000000;
-const float p_o928149155919_persistence = 0.500000000;
-const float p_o928149155919_offset = 0.000000000;
-const float p_o928065269840_eps = 0.100000000;
+const vec4 p_o1185796861808_albedo_color = vec4(1.000000000, 1.000000000, 1.000000000, 1.000000000);
+const float p_o1185796861808_metallic = 0.000000000;
+const float p_o1185796861808_roughness = 0.210000000;
+const float p_o1185796861808_emission_energy = 1.000000000;
+const float p_o1185796861808_normal = 1.000000000;
+const float p_o1185796861808_ao = 1.000000000;
+const float p_o1185796861808_depth_scale = 0.500000000;
+const float p_o1187491360655_amount = 1.000000000;
+const float p_o1187659132820_default_in1 = 0.000000000;
+const float p_o1187659132820_default_in2 = 0.000000000;
+const float p_o1187709464470_default_in1 = 0.000000000;
+const float p_o1187709464470_default_in2 = 0.100000000;
+const float p_o1187692687253_default_in1 = 0.000000000;
+const float p_o1187692687253_default_in2 = 0.500000000;
+const float seed_o1187675910034 = 0.036452000;
+const float p_o1187675910034_scale_x = 8.000000000;
+const float p_o1187675910034_scale_y = 8.000000000;
+const float p_o1187675910034_folds = 0.000000000;
+const float p_o1187675910034_iterations = 1.000000000;
+const float p_o1187675910034_persistence = 0.500000000;
+const float p_o1187675910034_offset = 0.000000000;
+const float p_o1187592023955_eps = 0.100000000;
 uniform sampler2D texture_1;
 const float texture_1_size = 1024.000000000;
-const float p_o926387548212_amount = 1.000000000;
+const float p_o1185914302327_amount = 1.000000000;
 uniform sampler2D texture_2;
 const float texture_2_size = 1024.000000000;
-const float p_o927998160974_eps = 0.100000000;
-const vec4 p_o927192854587_color = vec4(0.423529416, 0.647058845, 0.639215708, 1.000000000);
-// #globals: blend_2 (o927964606540)
+const float p_o1187524915089_eps = 0.100000000;
+const vec4 p_o1186719608702_color = vec4(0.450771332, 0.697265625, 0.677045405, 1.000000000);
+// #globals: blend_2 (o1187491360655)
 vec3 blend_normal(vec2 uv, vec3 c1, vec3 c2, float opacity) {
 	return opacity*c1 + (1.0-opacity)*c2;
 }
@@ -134,12 +134,12 @@ vec3 blend_additive(vec2 uv, vec3 c1, vec3 c2, float oppacity) {
 vec3 blend_addsub(vec2 uv, vec3 c1, vec3 c2, float oppacity) {
 	return c2 + (c1 - .5) * 2.0 * oppacity;
 }
-// #globals: math_2 (o928132378705)
+// #globals: math_2 (o1187659132820)
 float pingpong(float a, float b)
 {
   return (b != 0.0) ? abs(fract((a - b) / (b * 2.0)) * b * 2.0 - b) : 0.0;
 }
-// #globals: fbm2_5 (o928149155919)
+// #globals: fbm2_5 (o1187675910034)
 float old_value_noise_2d(vec2 coord, vec2 size, float offset, float seed) {
 	vec2 o = floor(coord)+rand2(vec2(seed, 1.0-seed))+size;
 	vec2 f = fract(coord);
@@ -528,128 +528,128 @@ float old_fbm_2d_voronoise(vec2 coord, vec2 size, int folds, int octaves, float 
 	}
 	return value / normalize_factor;
 }
-// #globals: uniform_greyscale (o927981383757)
-float o928065269840_input_d(vec2 uv, float _seed_variation_) {
-float o927914274891_0 = textureLod(texture_1, fract(uv), 0.0).r;
-return o927914274891_0;
+// #globals: uniform_greyscale (o1187508137872)
+float o1187592023955_input_d(vec2 uv, float _seed_variation_) {
+float o1187441029006_0 = textureLod(texture_1, fract(uv), 0.0).r;
+return o1187441029006_0;
 }
-// #instance: warp_4 (o928065269840)
-vec2 o928065269840_slope(vec2 uv, float epsilon, float _seed_variation_) {
-	return normalize( vec2(o928065269840_input_d((fract(uv+vec2(epsilon, 0.0))), _seed_variation_)-o928065269840_input_d((fract(uv-vec2(epsilon, 0.0))), _seed_variation_), o928065269840_input_d((fract(uv+vec2(0.0, epsilon))), _seed_variation_)-o928065269840_input_d((fract(uv-vec2(0.0, epsilon))), _seed_variation_)) );
+// #instance: warp_4 (o1187592023955)
+vec2 o1187592023955_slope(vec2 uv, float epsilon, float _seed_variation_) {
+	return normalize( vec2(o1187592023955_input_d((fract(uv+vec2(epsilon, 0.0))), _seed_variation_)-o1187592023955_input_d((fract(uv-vec2(epsilon, 0.0))), _seed_variation_), o1187592023955_input_d((fract(uv+vec2(0.0, epsilon))), _seed_variation_)-o1187592023955_input_d((fract(uv-vec2(0.0, epsilon))), _seed_variation_)) );
 }
-float o926387548212_input_in(vec2 uv, float _seed_variation_) {
-float o926454657078_0 = textureLod(texture_2, fract(uv), 0.0).r;
-return o926454657078_0;
+float o1185914302327_input_in(vec2 uv, float _seed_variation_) {
+float o1185981411193_0 = textureLod(texture_2, fract(uv), 0.0).r;
+return o1185981411193_0;
 }
-// #instance: normal_map2/edge_detect_1 (o926387548212)
-vec3 nm_o926387548212(vec2 uv, float amount, float size, float _seed_variation_) {
+// #instance: normal_map2/edge_detect_1 (o1185914302327)
+vec3 nm_o1185914302327(vec2 uv, float amount, float size, float _seed_variation_) {
 	vec3 e = vec3(1.0/size, -1.0/size, 0);
 	vec2 rv;
 	if (0 == 0) {
-		rv = vec2(1.0, -1.0)*o926387548212_input_in((uv+e.xy), _seed_variation_);
-		rv += vec2(-1.0, 1.0)*o926387548212_input_in((uv-e.xy), _seed_variation_);
-		rv += vec2(1.0, 1.0)*o926387548212_input_in((uv+e.xx), _seed_variation_);
-		rv += vec2(-1.0, -1.0)*o926387548212_input_in((uv-e.xx), _seed_variation_);
-		rv += vec2(2.0, 0.0)*o926387548212_input_in((uv+e.xz), _seed_variation_);
-		rv += vec2(-2.0, 0.0)*o926387548212_input_in((uv-e.xz), _seed_variation_);
-		rv += vec2(0.0, 2.0)*o926387548212_input_in((uv+e.zx), _seed_variation_);
-		rv += vec2(0.0, -2.0)*o926387548212_input_in((uv-e.zx), _seed_variation_);
+		rv = vec2(1.0, -1.0)*o1185914302327_input_in((uv+e.xy), _seed_variation_);
+		rv += vec2(-1.0, 1.0)*o1185914302327_input_in((uv-e.xy), _seed_variation_);
+		rv += vec2(1.0, 1.0)*o1185914302327_input_in((uv+e.xx), _seed_variation_);
+		rv += vec2(-1.0, -1.0)*o1185914302327_input_in((uv-e.xx), _seed_variation_);
+		rv += vec2(2.0, 0.0)*o1185914302327_input_in((uv+e.xz), _seed_variation_);
+		rv += vec2(-2.0, 0.0)*o1185914302327_input_in((uv-e.xz), _seed_variation_);
+		rv += vec2(0.0, 2.0)*o1185914302327_input_in((uv+e.zx), _seed_variation_);
+		rv += vec2(0.0, -2.0)*o1185914302327_input_in((uv-e.zx), _seed_variation_);
 		rv *= size*amount/128.0;
 	} else if (0 == 1) {
-		rv = vec2(3.0, -3.0)*o926387548212_input_in((uv+e.xy), _seed_variation_);
-		rv += vec2(-3.0, 3.0)*o926387548212_input_in((uv-e.xy), _seed_variation_);
-		rv += vec2(3.0, 3.0)*o926387548212_input_in((uv+e.xx), _seed_variation_);
-		rv += vec2(-3.0, -3.0)*o926387548212_input_in((uv-e.xx), _seed_variation_);
-		rv += vec2(10.0, 0.0)*o926387548212_input_in((uv+e.xz), _seed_variation_);
-		rv += vec2(-10.0, 0.0)*o926387548212_input_in((uv-e.xz), _seed_variation_);
-		rv += vec2(0.0, 10.0)*o926387548212_input_in((uv+e.zx), _seed_variation_);
-		rv += vec2(0.0, -10.0)*o926387548212_input_in((uv-e.zx), _seed_variation_);
+		rv = vec2(3.0, -3.0)*o1185914302327_input_in((uv+e.xy), _seed_variation_);
+		rv += vec2(-3.0, 3.0)*o1185914302327_input_in((uv-e.xy), _seed_variation_);
+		rv += vec2(3.0, 3.0)*o1185914302327_input_in((uv+e.xx), _seed_variation_);
+		rv += vec2(-3.0, -3.0)*o1185914302327_input_in((uv-e.xx), _seed_variation_);
+		rv += vec2(10.0, 0.0)*o1185914302327_input_in((uv+e.xz), _seed_variation_);
+		rv += vec2(-10.0, 0.0)*o1185914302327_input_in((uv-e.xz), _seed_variation_);
+		rv += vec2(0.0, 10.0)*o1185914302327_input_in((uv+e.zx), _seed_variation_);
+		rv += vec2(0.0, -10.0)*o1185914302327_input_in((uv-e.zx), _seed_variation_);
 		rv *= size*amount/512.0;
 	} else if (0 == 2) {
-		rv = vec2(2.0, 0.0)*o926387548212_input_in((uv+e.xz), _seed_variation_);
-		rv += vec2(-2.0, 0.0)*o926387548212_input_in((uv-e.xz), _seed_variation_);
-		rv += vec2(0.0, 2.0)*o926387548212_input_in((uv+e.zx), _seed_variation_);
-		rv += vec2(0.0, -2.0)*o926387548212_input_in((uv-e.zx), _seed_variation_);
+		rv = vec2(2.0, 0.0)*o1185914302327_input_in((uv+e.xz), _seed_variation_);
+		rv += vec2(-2.0, 0.0)*o1185914302327_input_in((uv-e.xz), _seed_variation_);
+		rv += vec2(0.0, 2.0)*o1185914302327_input_in((uv+e.zx), _seed_variation_);
+		rv += vec2(0.0, -2.0)*o1185914302327_input_in((uv-e.zx), _seed_variation_);
 		rv *= size*amount/64.0;
 	} else {
-		rv = vec2(1.0, 0.0)*o926387548212_input_in((uv+e.xz), _seed_variation_);
-		rv += vec2(0.0, 1.0)*o926387548212_input_in((uv+e.zx), _seed_variation_);
-		rv += vec2(-1.0, -1.0)*o926387548212_input_in((uv), _seed_variation_);
+		rv = vec2(1.0, 0.0)*o1185914302327_input_in((uv+e.xz), _seed_variation_);
+		rv += vec2(0.0, 1.0)*o1185914302327_input_in((uv+e.zx), _seed_variation_);
+		rv += vec2(-1.0, -1.0)*o1185914302327_input_in((uv), _seed_variation_);
 		rv *= size*amount/20.0;
 	}
 	return vec3(0.5)+0.5*normalize(vec3(rv, -1.0));
 }
-float o927998160974_input_d(vec2 uv, float _seed_variation_) {
-float o927914274891_0 = textureLod(texture_1, fract(uv), 0.0).r;
-return o927914274891_0;
+float o1187524915089_input_d(vec2 uv, float _seed_variation_) {
+float o1187441029006_0 = textureLod(texture_1, fract(uv), 0.0).r;
+return o1187441029006_0;
 }
-// #instance: warp_3 (o927998160974)
-vec2 o927998160974_slope(vec2 uv, float epsilon, float _seed_variation_) {
-	return normalize( vec2(o927998160974_input_d((fract(uv+vec2(epsilon, 0.0))), _seed_variation_)-o927998160974_input_d((fract(uv-vec2(epsilon, 0.0))), _seed_variation_), o927998160974_input_d((fract(uv+vec2(0.0, epsilon))), _seed_variation_)-o927998160974_input_d((fract(uv-vec2(0.0, epsilon))), _seed_variation_)) );
+// #instance: warp_3 (o1187524915089)
+vec2 o1187524915089_slope(vec2 uv, float epsilon, float _seed_variation_) {
+	return normalize( vec2(o1187524915089_input_d((fract(uv+vec2(epsilon, 0.0))), _seed_variation_)-o1187524915089_input_d((fract(uv-vec2(epsilon, 0.0))), _seed_variation_), o1187524915089_input_d((fract(uv+vec2(0.0, epsilon))), _seed_variation_)-o1187524915089_input_d((fract(uv-vec2(0.0, epsilon))), _seed_variation_)) );
 }
 void fragment() {
 	float _seed_variation_ = variation;
 	vec2 uv = fract(UV);
 
-// #output0: fbm2_5 (o928149155919)
-float o928149155919_0_1_f = old_fbm_2d_perlin((uv), vec2(p_o928149155919_scale_x, p_o928149155919_scale_y), int(p_o928149155919_folds), int(p_o928149155919_iterations), p_o928149155919_persistence, p_o928149155919_offset, (seed_o928149155919+fract(_seed_variation_)));
+// #output0: fbm2_5 (o1187675910034)
+float o1187675910034_0_1_f = old_fbm_2d_perlin((uv), vec2(p_o1187675910034_scale_x, p_o1187675910034_scale_y), int(p_o1187675910034_folds), int(p_o1187675910034_iterations), p_o1187675910034_persistence, p_o1187675910034_offset, (seed_o1187675910034+fract(_seed_variation_)));
 
-// #code: math_3 (o928165933138)
-float o928165933138_0_clamp_false = o928149155919_0_1_f-p_o928165933138_default_in2;
-float o928165933138_0_clamp_true = clamp(o928165933138_0_clamp_false, 0.0, 1.0);
-// #output0: math_3 (o928165933138)
-float o928165933138_0_1_f = o928165933138_0_clamp_false;
+// #code: math_3 (o1187692687253)
+float o1187692687253_0_clamp_false = o1187675910034_0_1_f-p_o1187692687253_default_in2;
+float o1187692687253_0_clamp_true = clamp(o1187692687253_0_clamp_false, 0.0, 1.0);
+// #output0: math_3 (o1187692687253)
+float o1187692687253_0_1_f = o1187692687253_0_clamp_false;
 
-// #code: math_4 (o928182710355)
-float o928182710355_0_clamp_false = o928165933138_0_1_f*p_o928182710355_default_in2;
-float o928182710355_0_clamp_true = clamp(o928182710355_0_clamp_false, 0.0, 1.0);
-// #output0: math_4 (o928182710355)
-float o928182710355_0_1_f = o928182710355_0_clamp_false;
+// #code: math_4 (o1187709464470)
+float o1187709464470_0_clamp_false = o1187692687253_0_1_f*p_o1187709464470_default_in2;
+float o1187709464470_0_clamp_true = clamp(o1187709464470_0_clamp_false, 0.0, 1.0);
+// #output0: math_4 (o1187709464470)
+float o1187709464470_0_1_f = o1187709464470_0_clamp_false;
 
-// #output0: uniform_greyscale (o927981383757)
-float o927981383757_0_1_f = (2.0 * abs(fract(elapsed_time) - 0.5));
+// #output0: uniform_greyscale (o1187508137872)
+float o1187508137872_0_1_f = (2.0 * abs(fract(elapsed_time) - 0.5));
 
-// #code: math_2 (o928132378705)
-float o928132378705_0_clamp_false = o927981383757_0_1_f+o928182710355_0_1_f;
-float o928132378705_0_clamp_true = clamp(o928132378705_0_clamp_false, 0.0, 1.0);
-// #output0: math_2 (o928132378705)
-float o928132378705_0_1_f = o928132378705_0_clamp_false;
+// #code: math_2 (o1187659132820)
+float o1187659132820_0_clamp_false = o1187508137872_0_1_f+o1187709464470_0_1_f;
+float o1187659132820_0_clamp_true = clamp(o1187659132820_0_clamp_false, 0.0, 1.0);
+// #output0: math_2 (o1187659132820)
+float o1187659132820_0_1_f = o1187659132820_0_clamp_false;
 
-// #code: warp_4 (o928065269840)
-vec2 o928065269840_0_slope = o928065269840_slope((uv), p_o928065269840_eps, _seed_variation_);
-vec2 o928065269840_0_warp = o928065269840_0_slope;
-// #output0: normal_map2/edge_detect_1 (o926387548212)
-vec3 o926387548212_0_1_rgb = nm_o926387548212(((uv)+(-0.03 + fract(elapsed_time) * 0.06)*o928065269840_0_warp), p_o926387548212_amount, 1024.0, _seed_variation_);
+// #code: warp_4 (o1187592023955)
+vec2 o1187592023955_0_slope = o1187592023955_slope((uv), p_o1187592023955_eps, _seed_variation_);
+vec2 o1187592023955_0_warp = o1187592023955_0_slope;
+// #output0: normal_map2/edge_detect_1 (o1185914302327)
+vec3 o1185914302327_0_1_rgb = nm_o1185914302327(((uv)+(-0.03 + fract(elapsed_time) * 0.06)*o1187592023955_0_warp), p_o1185914302327_amount, 1024.0, _seed_variation_);
 
-// #output0: warp_4 (o928065269840)
-vec4 o928065269840_0_1_rgba = vec4(o926387548212_0_1_rgb, 1.0);
+// #output0: warp_4 (o1187592023955)
+vec4 o1187592023955_0_1_rgba = vec4(o1185914302327_0_1_rgb, 1.0);
 
-// #code: warp_3 (o927998160974)
-vec2 o927998160974_0_slope = o927998160974_slope((uv), p_o927998160974_eps, _seed_variation_);
-vec2 o927998160974_0_warp = o927998160974_0_slope;
-// #output0: normal_map2/edge_detect_1 (o926387548212)
-vec3 o926387548212_0_3_rgb = nm_o926387548212(((uv)+(-0.03 + fract(elapsed_time + 0.5) * 0.06)*o927998160974_0_warp), p_o926387548212_amount, 1024.0, _seed_variation_);
+// #code: warp_3 (o1187524915089)
+vec2 o1187524915089_0_slope = o1187524915089_slope((uv), p_o1187524915089_eps, _seed_variation_);
+vec2 o1187524915089_0_warp = o1187524915089_0_slope;
+// #output0: normal_map2/edge_detect_1 (o1185914302327)
+vec3 o1185914302327_0_3_rgb = nm_o1185914302327(((uv)+(-0.03 + fract(elapsed_time + 0.5) * 0.06)*o1187524915089_0_warp), p_o1185914302327_amount, 1024.0, _seed_variation_);
 
-// #output0: warp_3 (o927998160974)
-vec4 o927998160974_0_1_rgba = vec4(o926387548212_0_3_rgb, 1.0);
+// #output0: warp_3 (o1187524915089)
+vec4 o1187524915089_0_1_rgba = vec4(o1185914302327_0_3_rgb, 1.0);
 
-// #code: blend_2 (o927964606540)
-vec4 o927964606540_0_s1 = o927998160974_0_1_rgba;
-vec4 o927964606540_0_s2 = o928065269840_0_1_rgba;
-float o927964606540_0_a = p_o927964606540_amount*o928132378705_0_1_f;
-// #output0: blend_2 (o927964606540)
-vec4 o927964606540_0_1_rgba = vec4(blend_normal((uv), o927964606540_0_s1.rgb, o927964606540_0_s2.rgb, o927964606540_0_a*o927964606540_0_s1.a), min(1.0, o927964606540_0_s2.a+o927964606540_0_a*o927964606540_0_s1.a));
+// #code: blend_2 (o1187491360655)
+vec4 o1187491360655_0_s1 = o1187524915089_0_1_rgba;
+vec4 o1187491360655_0_s2 = o1187592023955_0_1_rgba;
+float o1187491360655_0_a = p_o1187491360655_amount*o1187659132820_0_1_f;
+// #output0: blend_2 (o1187491360655)
+vec4 o1187491360655_0_1_rgba = vec4(blend_normal((uv), o1187491360655_0_s1.rgb, o1187491360655_0_s2.rgb, o1187491360655_0_a*o1187491360655_0_s1.a), min(1.0, o1187491360655_0_s2.a+o1187491360655_0_a*o1187491360655_0_s1.a));
 
-// #output0: uniform (o927192854587)
-vec4 o927192854587_0_1_rgba = p_o927192854587_color;
+// #output0: uniform (o1186719608702)
+vec4 o1186719608702_0_1_rgba = p_o1186719608702_color;
 
-	vec3 albedo_tex = ((o927192854587_0_1_rgba).rgb).rgb;
+	vec3 albedo_tex = ((o1186719608702_0_1_rgba).rgb).rgb;
 	albedo_tex = mix(pow((albedo_tex + vec3(0.055)) * (1.0 / (1.0 + 0.055)),vec3(2.4)),albedo_tex * (1.0 / 12.92),lessThan(albedo_tex,vec3(0.04045)));
-	ALBEDO = albedo_tex*p_o926270107693_albedo_color.rgb;
-	METALLIC = 1.0*p_o926270107693_metallic;
-	ROUGHNESS = 1.0*p_o926270107693_roughness;
-	NORMAL = ((o927964606540_0_1_rgba).rgb);
-	EMISSION = vec3(0.0)*p_o926270107693_emission_energy;
+	ALBEDO = albedo_tex*p_o1185796861808_albedo_color.rgb;
+	METALLIC = 1.0*p_o1185796861808_metallic;
+	ROUGHNESS = 1.0*p_o1185796861808_roughness;
+	NORMAL = ((o1187491360655_0_1_rgba).rgb);
+	EMISSION = vec3(0.0)*p_o1185796861808_emission_energy;
 }
 
 
