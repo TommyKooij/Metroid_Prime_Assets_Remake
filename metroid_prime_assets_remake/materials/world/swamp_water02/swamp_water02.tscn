@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmj5ufcrpls7n"]
+
+[ext_resource type="Material" uid="uid://w83g88cwk0ip" path="res://materials/world/swamp_water02/swamp_water02.tres" id="1_wnk1c"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pp85n"]
+material = ExtResource("1_wnk1c")
+
+[node name="swamp_water02" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_pp85n")

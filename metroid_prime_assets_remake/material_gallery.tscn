@@ -1,0 +1,74 @@
+[gd_scene load_steps=14 format=3 uid="uid://c2it7vw2x5hms"]
+
+[ext_resource type="Material" uid="uid://coo61f6qhbsyt" path="res://materials/world/desert_sand/desert_sand.tres" id="1_uidh8"]
+[ext_resource type="Material" uid="uid://8vydmcpl6qq8" path="res://materials/world/swamp_water/swamp_water.tres" id="2_4p0xq"]
+[ext_resource type="Material" uid="uid://djubujjw3an0l" path="res://materials/world/swamp_water01/swamp_water01.tres" id="3_8xyci"]
+[ext_resource type="Material" uid="uid://w83g88cwk0ip" path="res://materials/world/swamp_water02/swamp_water02.tres" id="4_8xyci"]
+[ext_resource type="Material" uid="uid://bicylkvptmckb" path="res://materials/items/energy_capsule/energy_capsule.tres" id="5_ha1cd"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a5uxp"]
+sky_top_color = Color(0.129, 0.129, 0.129, 1)
+sky_horizon_color = Color(0.129, 0.129, 0.129, 1)
+ground_bottom_color = Color(0.129, 0.129, 0.129, 1)
+ground_horizon_color = Color(0.129, 0.129, 0.129, 1)
+
+[sub_resource type="Sky" id="Sky_uidh8"]
+sky_material = SubResource("ProceduralSkyMaterial_a5uxp")
+
+[sub_resource type="Environment" id="Environment_uwv5b"]
+background_mode = 2
+sky = SubResource("Sky_uidh8")
+tonemap_mode = 2
+ssao_enabled = true
+glow_enabled = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_4p0xq"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_uwv5b"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ha1cd"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_vpnqt"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_b3w4i"]
+
+[node name="material_gallery" type="Node3D"]
+
+[node name="scene" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="scene"]
+environment = SubResource("Environment_uwv5b")
+
+[node name="world" type="Node3D" parent="scene"]
+
+[node name="agon_wastes" type="Node3D" parent="scene/world"]
+
+[node name="desert_sand" type="MeshInstance3D" parent="scene/world/agon_wastes"]
+material_override = ExtResource("1_uidh8")
+mesh = SubResource("SphereMesh_4p0xq")
+
+[node name="torvus_bog" type="Node3D" parent="scene/world"]
+
+[node name="swamp_water" type="MeshInstance3D" parent="scene/world/torvus_bog"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+material_override = ExtResource("2_4p0xq")
+mesh = SubResource("SphereMesh_uwv5b")
+
+[node name="swamp_water01" type="MeshInstance3D" parent="scene/world/torvus_bog"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2)
+material_override = ExtResource("3_8xyci")
+mesh = SubResource("SphereMesh_ha1cd")
+
+[node name="swamp_water02" type="MeshInstance3D" parent="scene/world/torvus_bog"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+material_override = ExtResource("4_8xyci")
+mesh = SubResource("SphereMesh_vpnqt")
+
+[node name="items" type="Node3D" parent="scene"]
+
+[node name="energy_capsule" type="MeshInstance3D" parent="scene/items"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+material_override = ExtResource("5_ha1cd")
+mesh = SubResource("SphereMesh_b3w4i")
+
+[node name="scenery" type="Node3D" parent="scene"]

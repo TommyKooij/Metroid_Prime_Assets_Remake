@@ -1,10 +1,10 @@
 [gd_scene load_steps=32 format=3 uid="uid://b6kampklt4bfv"]
 
-[ext_resource type="Texture2D" uid="uid://cotvj8epfulc7" path="res://energy_capsules/materials/sparkle.png" id="1_r541t"]
-[ext_resource type="Texture2D" uid="uid://bm3ihp5a3tquw" path="res://energy_capsules/materials/ring.png" id="2_cqua1"]
+[ext_resource type="Texture2D" uid="uid://cotvj8epfulc7" path="res://energy_capsules/textures/sparkle.png" id="1_r541t"]
+[ext_resource type="Texture2D" uid="uid://bm3ihp5a3tquw" path="res://energy_capsules/textures/ring.png" id="2_cqua1"]
 [ext_resource type="Shader" uid="uid://tdxltc0w8015" path="res://energy_capsules/shaders/energy_capsule.tres" id="3_iikcv"]
-[ext_resource type="Texture2D" uid="uid://30aydlq6jy0x" path="res://energy_capsules/materials/wavelet.png" id="4_dtqvx"]
-[ext_resource type="Texture2D" uid="uid://dmbuapooeg6pv" path="res://energy_capsules/materials/wavelet-occ.png" id="5_tiga1"]
+[ext_resource type="Texture2D" uid="uid://30aydlq6jy0x" path="res://energy_capsules/textures/wavelet.png" id="4_dtqvx"]
+[ext_resource type="Texture2D" uid="uid://dmbuapooeg6pv" path="res://energy_capsules/textures/wavelet-occ.png" id="5_tiga1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2eme3"]
 transparency = 1

@@ -1,10 +1,8 @@
-[gd_scene load_steps=32 format=3 uid="uid://nm2wkrukxcsx"]
+[gd_scene load_steps=29 format=3 uid="uid://nm2wkrukxcsx"]
 
-[ext_resource type="Texture2D" uid="uid://cotvj8epfulc7" path="res://energy_capsules/materials/sparkle.png" id="1_cxl6c"]
-[ext_resource type="Texture2D" uid="uid://bm3ihp5a3tquw" path="res://energy_capsules/materials/ring.png" id="2_jtr4m"]
-[ext_resource type="Shader" uid="uid://tdxltc0w8015" path="res://energy_capsules/shaders/energy_capsule.tres" id="3_e1gh8"]
-[ext_resource type="Texture2D" uid="uid://30aydlq6jy0x" path="res://energy_capsules/materials/wavelet.png" id="4_0xm0x"]
-[ext_resource type="Texture2D" uid="uid://dmbuapooeg6pv" path="res://energy_capsules/materials/wavelet-occ.png" id="5_cxl6c"]
+[ext_resource type="Texture2D" uid="uid://cotvj8epfulc7" path="res://energy_capsules/textures/sparkle.png" id="1_cxl6c"]
+[ext_resource type="Material" uid="uid://bicylkvptmckb" path="res://materials/items/energy_capsule/energy_capsule.tres" id="2_cxl6c"]
+[ext_resource type="Texture2D" uid="uid://bm3ihp5a3tquw" path="res://energy_capsules/textures/ring.png" id="2_jtr4m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2eme3"]
 transparency = 1
@@ -104,14 +102,6 @@ alpha_curve = SubResource("CurveTexture_h6aet")
 
 [sub_resource type="QuadMesh" id="QuadMesh_ovl8d"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_wg57c"]
-render_priority = 0
-shader = ExtResource("3_e1gh8")
-shader_parameter/main_texture_speed = Vector2(0, 0.5)
-shader_parameter/main_texture = ExtResource("4_0xm0x")
-shader_parameter/main_texture_power = 1.0
-shader_parameter/main_texture_emission = ExtResource("5_cxl6c")
-
 [sub_resource type="Curve" id="Curve_f2h4h"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 5), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
@@ -167,7 +157,7 @@ process_material = SubResource("ParticleProcessMaterial_yxh8w")
 draw_pass_1 = SubResource("QuadMesh_ovl8d")
 
 [node name="wave" type="GPUParticles3D" parent="."]
-material_override = SubResource("ShaderMaterial_wg57c")
+material_override = ExtResource("2_cxl6c")
 amount = 1
 fixed_fps = 60
 local_coords = true

@@ -1,9 +1,9 @@
 [gd_scene load_steps=17 format=3 uid="uid://dmjdn8hcpr5rq"]
 
-[ext_resource type="Texture2D" uid="uid://dbhis0qnr7e4w" path="res://doors/materials/hexagon_outline.png" id="1_ev1mp"]
-[ext_resource type="Texture2D" uid="uid://difli58xgmans" path="res://doors/materials/hexagon.png" id="1_o873b"]
-[ext_resource type="Texture2D" uid="uid://b3oc5sirx8ql5" path="res://doors/materials/hexagon_blur.png" id="2_mqhme"]
-[ext_resource type="Texture2D" uid="uid://cobv2cceejura" path="res://doors/materials/panels.png" id="3_ixgfn"]
+[ext_resource type="Texture2D" uid="uid://dbhis0qnr7e4w" path="res://doors/textures/hexagon_outline.png" id="1_ev1mp"]
+[ext_resource type="Texture2D" uid="uid://difli58xgmans" path="res://doors/textures/hexagon.png" id="1_o873b"]
+[ext_resource type="Texture2D" uid="uid://b3oc5sirx8ql5" path="res://doors/textures/hexagon_blur.png" id="2_mqhme"]
+[ext_resource type="Texture2D" uid="uid://cobv2cceejura" path="res://doors/textures/panels.png" id="3_ixgfn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ixgfn"]
 render_priority = 1

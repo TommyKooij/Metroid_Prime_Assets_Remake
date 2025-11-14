@@ -1,9 +1,9 @@
 [gd_scene load_steps=37 format=3 uid="uid://bxwvw7veijugn"]
 
 [ext_resource type="Shader" uid="uid://bb4g14xp62v37" path="res://portals/shaders/portal.tres" id="1_n4apo"]
-[ext_resource type="Texture2D" uid="uid://buycx8hone0yr" path="res://portals/materials/cellular.png" id="2_n4apo"]
-[ext_resource type="Texture2D" uid="uid://btblxqtleuchc" path="res://portals/materials/cellular-occ.png" id="3_skol1"]
-[ext_resource type="Texture2D" uid="uid://dcyv72gtoubyj" path="res://portals/materials/smoke_08.png" id="4_skol1"]
+[ext_resource type="Texture2D" uid="uid://buycx8hone0yr" path="res://portals/textures/cellular.png" id="2_n4apo"]
+[ext_resource type="Texture2D" uid="uid://btblxqtleuchc" path="res://portals/textures/cellular-occ.png" id="3_skol1"]
+[ext_resource type="Texture2D" uid="uid://dcyv72gtoubyj" path="res://portals/textures/smoke_08.png" id="4_skol1"]
 [ext_resource type="Texture2D" uid="uid://d3fts5ui6rcxf" path="res://downloads/kenney_particle-pack/PNG (Transparent)/spark_04.png" id="5_8wnah"]
 [ext_resource type="Texture2D" uid="uid://nd531j2ga6ma" path="res://downloads/kenney_particle-pack/PNG (Transparent)/spark_05.png" id="5_x4cho"]
 
