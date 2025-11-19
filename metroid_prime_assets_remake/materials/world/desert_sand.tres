@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://coo61f6qhbsyt"]
+
+[ext_resource type="Texture2D" uid="uid://drv1mcvttfyyf" path="res://prefabs/world/desert_sand/desert_sand_albedo.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://dq86ms3wkhqm1" path="res://prefabs/world/desert_sand/desert_sand_orm.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b4e08unwgnv7m" path="res://prefabs/world/desert_sand/desert_sand_normal.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dk7p0qp3y4t31" path="res://prefabs/world/desert_sand/desert_sand_heightmap.png" id="4"]
+
+[resource]
+albedo_color = Color(0.777344, 0.642985, 0.41143, 1)
+albedo_texture = ExtResource("1")
+roughness_texture = ExtResource("2")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3")
+ao_enabled = true
+ao_texture = ExtResource("2")
+heightmap_enabled = true
+heightmap_scale = 25.0
+heightmap_deep_parallax = true
+heightmap_min_layers = 8
+heightmap_max_layers = 32
+heightmap_texture = ExtResource("4")

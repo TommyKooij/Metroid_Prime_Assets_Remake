@@ -1,10 +1,10 @@
 [gd_scene load_steps=14 format=3 uid="uid://c2it7vw2x5hms"]
 
-[ext_resource type="Material" uid="uid://coo61f6qhbsyt" path="res://materials/world/desert_sand/desert_sand.tres" id="1_uidh8"]
-[ext_resource type="Material" uid="uid://8vydmcpl6qq8" path="res://materials/world/swamp_water/swamp_water.tres" id="2_4p0xq"]
-[ext_resource type="Material" uid="uid://djubujjw3an0l" path="res://materials/world/swamp_water01/swamp_water01.tres" id="3_8xyci"]
-[ext_resource type="Material" uid="uid://w83g88cwk0ip" path="res://materials/world/swamp_water02/swamp_water02.tres" id="4_8xyci"]
-[ext_resource type="Material" uid="uid://bicylkvptmckb" path="res://materials/items/energy_capsule/energy_capsule.tres" id="5_ha1cd"]
+[ext_resource type="Material" uid="uid://coo61f6qhbsyt" path="res://materials/world/desert_sand.tres" id="1_uidh8"]
+[ext_resource type="Material" uid="uid://8vydmcpl6qq8" path="res://materials/world/swamp_water.tres" id="2_4p0xq"]
+[ext_resource type="Material" uid="uid://djubujjw3an0l" path="res://materials/world/swamp_water01.tres" id="3_8xyci"]
+[ext_resource type="Material" uid="uid://w83g88cwk0ip" path="res://materials/world/swamp_water02.tres" id="4_8xyci"]
+[ext_resource type="Material" uid="uid://bicylkvptmckb" path="res://materials/items/energy_capsule.tres" id="5_ha1cd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a5uxp"]
 sky_top_color = Color(0.129, 0.129, 0.129, 1)

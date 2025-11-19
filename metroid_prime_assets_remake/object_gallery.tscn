@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://dejs3gf61s8mf"]
 
-[ext_resource type="PackedScene" uid="uid://nm2wkrukxcsx" path="res://energy_capsules/energy_capsule01.tscn" id="1_7wtgh"]
-[ext_resource type="PackedScene" uid="uid://c31qdujl0uqc1" path="res://energy_capsules/energy_capsule02.tscn" id="2_kjbsd"]
-[ext_resource type="PackedScene" uid="uid://b6kampklt4bfv" path="res://energy_capsules/energy_capsule03.tscn" id="3_rgi60"]
-[ext_resource type="PackedScene" uid="uid://da35t7ltoa2v3" path="res://energy_capsules/energy_capsule04.tscn" id="4_nrmhn"]
-[ext_resource type="PackedScene" uid="uid://bxwvw7veijugn" path="res://portals/dark_portal.tscn" id="5_kjbsd"]
-[ext_resource type="PackedScene" uid="uid://p0k1m7312p7" path="res://portals/light_portal.tscn" id="6_rgi60"]
+[ext_resource type="PackedScene" uid="uid://nm2wkrukxcsx" path="res://items/energy_capsules/energy_capsule01.tscn" id="1_7wtgh"]
+[ext_resource type="PackedScene" uid="uid://c31qdujl0uqc1" path="res://items/energy_capsules/energy_capsule02.tscn" id="2_kjbsd"]
+[ext_resource type="PackedScene" uid="uid://b6kampklt4bfv" path="res://items/energy_capsules/energy_capsule03.tscn" id="3_rgi60"]
+[ext_resource type="PackedScene" uid="uid://da35t7ltoa2v3" path="res://items/energy_capsules/energy_capsule04.tscn" id="4_nrmhn"]
+[ext_resource type="PackedScene" uid="uid://bxwvw7veijugn" path="res://prefabs/portals/dark_portal.tscn" id="5_kjbsd"]
+[ext_resource type="PackedScene" uid="uid://p0k1m7312p7" path="res://prefabs/portals/light_portal.tscn" id="6_rgi60"]
 
 [sub_resource type="Environment" id="Environment_gnbok"]
 glow_enabled = true
